@@ -1,0 +1,34 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.navbar {
+    padding: 10px 30px 10px 30px;
+    flex-direction: row;
+    
+}
+.nav.brand {
+    justify-content: center;
+}
+.nav-actions {
+    display: flex;
+    align-items: center;
+}
+.row {
+    height:100vw;
+}
+div.hero.col {
+    background-image: radial-gradient(#fff 40%,#e6e6e6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 50px;
+    box-shadow: rgb(91, 91, 91) 6px 6px 10px 1px;
+}
+
