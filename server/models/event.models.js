@@ -24,7 +24,7 @@ const EventSchema = new mongoose.Schema({
     },
     vibes: {
         type: String,
-        enum: ['casual', 'dressy', 'themed', 'see description 🙃'],
+        enum: ['casual', 'dressy', 'themed'],
     }
 
 }, { timestamps: true });
