@@ -8,9 +8,10 @@ const Navbar = () => {
         <div>
             <nav className="navbar bg-light">
                 <div className="nav-links">
+                    <Link to={"/new_event"}>Create New</Link>
                     <Link to={"/about"}>Mission</Link>
                     <div className="dropdown">
-                        <Link to={'#'} className="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <Link to={'#'} className="btn btn-outline-dark dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             Explore
                         </Link>
                         <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -19,15 +20,14 @@ const Navbar = () => {
                             <li><Link to={"/events/:city"} className="dropdown-item" >Seattle</Link></li>
                         </ul>
                     </div>
-                    <Link to={"/new_event"}>Create New</Link>
                 </div>
                 <p className="nav brand">
-                    <h1>sh.Event</h1>
+                    <h1 style={{ fontWeight: "Bold" }}>sh.Event</h1>
                 </p>
                 <div className="nav-actions">
                     <form action="GET">
                         <input type="search" />
-                        <input type="submit" value="search" />
+                        <input type="submit" value="search" className="btn btn-outline-warning" />
                     </form>
                     <img className="avatar" src="#" alt="img" />
                     <Link to={"/"} className="btn btn-outline-warning" role="button">Logout</Link>
