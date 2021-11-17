@@ -5,7 +5,7 @@ import '../static/Main.css'
 function Navbar() {
     return (
         <div>
-            <div className="navbar bg-light">
+            <nav className="navbar bg-light">
                 <div className="nav-links">
                     <Link to={"/about"}>Mission</Link>
                     <select name="explore" id="explore" value="explore">
@@ -16,20 +16,18 @@ function Navbar() {
                     </select>
                     <Link to={"/login"}>Join</Link>
                 </div>
-                <h1 className="nav brand">sh.Event</h1>
+                <p className="nav brand">
+                    <h1>sh.Event</h1>
+                </p>
                 <div className="nav-actions">
-                    <div className="nav-search">
-                        <form action="GET">
-                            <input type="search" />
-                            <input type="submit" value="search" />
-                        </form>
-                        <div className="nav-buttons">
-                            <div><img className="avatar" src="#" alt="img" /></div>
-                            <Link to={"/"} className="btn btn-outline-warning" role="button" href="#">Logout</Link>
-                        </div>
-                    </div>
+                    <form action="GET">
+                        <input type="search" />
+                        <input type="submit" value="search" />
+                    </form>
+                    <img className="avatar" src="#" alt="img" />
+                    <Link to={"/"} className="btn btn-outline-warning" role="button">Logout</Link>
                 </div>
-            </div>
+            </nav>
         </div>
     )
 }
