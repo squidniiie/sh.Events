@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../static/Main.css'
 
-function Navbar() {
+const Navbar = () => {
+
     return (
         <div>
             <nav className="navbar bg-light">
@@ -14,7 +15,7 @@ function Navbar() {
                         <option><Link to={"/"}>San Francisco</Link></option>
                         <option><Link to={"/"}>Seattle</Link></option>
                     </select>
-                    <Link to={"/login"}>Join</Link>
+                    <Link to={"/new_event"}>Create New</Link>
                 </div>
                 <p className="nav brand">
                     <h1>sh.Event</h1>
