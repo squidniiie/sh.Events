@@ -9,12 +9,16 @@ const Navbar = () => {
             <nav className="navbar bg-light">
                 <div className="nav-links">
                     <Link to={"/about"}>Mission</Link>
-                    <select name="explore" id="explore" value="explore">
-                        <option><Link to={"/events"}>Explore</Link></option>
-                        <option><Link to={"/"}>Los Angeles</Link></option>
-                        <option><Link to={"/"}>San Francisco</Link></option>
-                        <option><Link to={"/"}>Seattle</Link></option>
-                    </select>
+                    <div className="dropdown">
+                        <Link to={'#'} className="btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                            Explore
+                        </Link>
+                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><Link to={"/events/:city"} className="dropdown-item" >Los Angeles</Link></li>
+                            <li><Link to={"/events/:city"} className="dropdown-item" >San Francisco</Link></li>
+                            <li><Link to={"/events/:city"} className="dropdown-item" >Seattle</Link></li>
+                        </ul>
+                    </div>
                     <Link to={"/new_event"}>Create New</Link>
                 </div>
                 <p className="nav brand">
@@ -28,8 +32,8 @@ const Navbar = () => {
                     <img className="avatar" src="#" alt="img" />
                     <Link to={"/"} className="btn btn-outline-warning" role="button">Logout</Link>
                 </div>
-            </nav>
-        </div>
+            </nav >
+        </div >
     )
 }
 

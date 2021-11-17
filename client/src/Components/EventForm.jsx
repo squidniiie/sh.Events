@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import '../static/Main.css'
 
@@ -7,6 +7,7 @@ function EventForm() {
     return (
         <div>
             <Navbar />
+            <Link to={"/"}>Home</Link>
             <div className="container">
                 <h1>Add New Event</h1>
                 <form>
