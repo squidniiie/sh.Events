@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Components/Detail'
+import './Detail'
 import '../Components/EventList'
 
 function Explore() {
