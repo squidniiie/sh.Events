@@ -5,14 +5,14 @@ import {
   Route
 } from "react-router-dom";
 import Main from './view/Main';
-import Detail from './Components/Detail';
+import Detail from './view/Detail';
 import Explore from './view/Explore';
 import About from './view/About';
 import EventForm from './Components/EventForm';
 // import EventList from './Components/EventList';
 import CityList from './Components/CityList';
 import './static/Main.css';
-// import Navbar from './Components/Navbar';
+
 import './static/App.css';
 
 function App() {
