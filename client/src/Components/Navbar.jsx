@@ -10,18 +10,7 @@ const Navbar = () => {
                 <div className="nav-links">
                     <Link to={"/new_event"}>Create New</Link>
                     <Link to={"/about"}>Mission</Link>
-                    <Link to={"/events"}>Explore</Link>
-                    {/* <div className="dropdown">
-                        <Link to={'#'} className="btn btn-outline-dark dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            Explore
-                        </Link>
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><Link to={"/events/:city"} className="dropdown-item" >Los Angeles</Link></li>
-                            <li><Link to={"/events/:city"} className="dropdown-item" >San Francisco</Link></li>
-                            <li><Link to={"/events/:city"} className="dropdown-item" >Seattle</Link></li>
-                        </ul>
-                    </div> */}
-                    {/* <Link to={"/events/:city"} className="dropdown-item" >City Detail</Link> */}
+
                 </div>
                 <p className="nav brand">
                     <h1 style={{ fontWeight: "Bold" }}>sh.Event</h1>
