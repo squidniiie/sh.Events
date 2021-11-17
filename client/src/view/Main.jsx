@@ -7,13 +7,13 @@ function Main() {
     return (
         <div>
             <Navbar />
-            <div class="main">
-                <div class="row">
-                    <img class="hero col" src="https://cdn.pixabay.com/photo/2021/10/19/21/31/landscape-6724639_1280.jpg" alt="hero img" />
-                    <div class="hero col">
-                        <div class="hero card">
-                            <h4>Hero subtitle Example</h4>
-                            <h1>Hero Example Title</h1>
+            <div className="main">
+                <div className="row">
+                    <img className="hero col" src="https://cdn.pixabay.com/photo/2021/10/19/21/31/landscape-6724639_1280.jpg" alt="hero img" />
+                    <div className="hero col">
+                        <div className="hero card">
+                            <h5 style={{ fontStyle: "italic" }}>Building a Diversely Likeminded Community</h5>
+                            <h1 style={{ fontWeight: "Bold", fontSize: "42pt" }}>she.Event</h1>
                         </div>
                     </div>
                 </div>
