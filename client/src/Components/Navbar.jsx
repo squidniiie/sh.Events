@@ -10,7 +10,8 @@ const Navbar = () => {
                 <div className="nav-links">
                     <Link to={"/new_event"}>Create New</Link>
                     <Link to={"/about"}>Mission</Link>
-                    <div className="dropdown">
+                    <Link to={"/events"}>Explore</Link>
+                    {/* <div className="dropdown">
                         <Link to={'#'} className="btn btn-outline-dark dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                             Explore
                         </Link>
@@ -19,7 +20,8 @@ const Navbar = () => {
                             <li><Link to={"/events/:city"} className="dropdown-item" >San Francisco</Link></li>
                             <li><Link to={"/events/:city"} className="dropdown-item" >Seattle</Link></li>
                         </ul>
-                    </div>
+                    </div> */}
+                    {/* <Link to={"/events/:city"} className="dropdown-item" >City Detail</Link> */}
                 </div>
                 <p className="nav brand">
                     <h1 style={{ fontWeight: "Bold" }}>sh.Event</h1>
@@ -33,6 +35,19 @@ const Navbar = () => {
                     <Link to={"/"} className="btn btn-outline-warning" role="button">Logout</Link>
                 </div>
             </nav >
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <Link class="nav-link active" aria-current="page" to={"/events/:city"}>Los Angeles</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" to={"/events/:city"}>San Francisco</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link class="nav-link" to={"/events/:city"}>Seattle</Link>
+                    </li>
+                </ul>
+            </nav>
         </div >
     )
 }
