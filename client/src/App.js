@@ -9,9 +9,10 @@ import Detail from './Components/Detail';
 import Explore from './view/Explore';
 import About from './view/About';
 import EventForm from './Components/EventForm';
-import EventList from './Components/EventList';
-import './static/Main.css'
-import './Components/Navbar';
+// import EventList from './Components/EventList';
+import CityList from './Components/CityList';
+import './static/Main.css';
+// import Navbar from './Components/Navbar';
 import './static/App.css';
 
 function App() {
@@ -28,14 +29,14 @@ function App() {
           <Route exact path="/events/:id">
             <Detail />
           </Route>
+          <Route exact path="/events/:city">
+            <CityList />
+          </Route>
           <Route exact path="/about">
             <About />
           </Route>
           <Route exact path="/events">
             <Explore />
-          </Route>
-          <Route exact path="/events">
-            <EventList />
           </Route>
         </Switch>
       </div>
