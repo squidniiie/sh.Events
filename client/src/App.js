@@ -5,14 +5,10 @@ import {
   Route
 } from "react-router-dom";
 import Main from './view/Main';
-import Detail from './view/Detail';
-import Explore from './view/Explore';
 import About from './view/About';
-import EventForm from './Components/EventForm';
-// import EventList from './Components/EventList';
-import CityList from './Components/CityList';
+import EventForm from './view/Create';
+import Dashboard from './view/Dashboard';
 import './static/Main.css';
-
 import './static/App.css';
 
 function App() {
@@ -26,18 +22,13 @@ function App() {
           <Route exact path="/new_event">
             <EventForm />
           </Route>
-          <Route exact path="/events/:id">
-            <Detail />
-          </Route>
           <Route exact path="/events/:city">
-            <CityList />
+            <Dashboard />
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/events">
-            <Explore />
-          </Route>
+
         </Switch>
       </div>
     </BrowserRouter>
