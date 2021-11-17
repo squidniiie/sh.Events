@@ -25,6 +25,13 @@ module.exports.getEvent = (request, response) => {
         .then(event => response.json(event))
         .catch(err => response.json(err))
 }
+module.exports.getEventsByCity = (request, response) => {
+    Event.find({ city: request.params.city })
+        .then(events => response.json(events))
+        .catch(err => response.json(err))
+}
+// params
+
 
 // UPDATE METHOD:
 
