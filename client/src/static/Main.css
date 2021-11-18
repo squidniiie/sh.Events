@@ -5,10 +5,7 @@
 .navbar.bg-light{
     display: flex;
     padding: 10px 30px 10px 30px;
-    /* margin: 0px 0px 20px 0px; */
-    /* flex-direction: row;  */
     justify-content: space-between;
-    /* align-items: center; */
     flex-wrap: nowrap;
     height:5vw;
     width: 101vw;
@@ -28,14 +25,14 @@
 .nav.justify-content-center {
     height:3vw;
 }
+
 .avatar {
     width:40px;
     height:40px;
     border-radius: 50px;
 }
-/* .nav-item {
-    font-weight: bold;
-} */
+
+
 
 /* MAIN VIEW STYLING */
 img.hero.col {
