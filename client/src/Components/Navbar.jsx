@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
 import '../static/Main.css'
 
 const Navbar = () => {
+
+    const { city } = useParams();
+
 
     return (
         <div>
@@ -28,13 +33,13 @@ const Navbar = () => {
             <nav>
                 <ul className="nav justify-content-center">
                     <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to={"/events/:city"}>Los Angeles</Link>
+                        <Link className="nav-link active" aria-current="page" to={`/events/${city}`}>Los Angeles</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to={"/events/:city"}>San Francisco</Link>
+                        <Link className="nav-link active" aria-current="page" to={`/events/${city}`}>San Francisco</Link>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link active" aria-current="page" to={"/events/:city"}>Seattle</Link>
+                        <Link className="nav-link active" aria-current="page" to={`/events/${city}`}>Seattle</Link>
                     </li>
                 </ul>
             </nav>

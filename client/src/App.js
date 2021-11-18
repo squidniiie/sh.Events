@@ -10,7 +10,6 @@ import Create from './view/Create';
 import Dashboard from './view/Dashboard';
 import Navbar from './Components/Navbar'
 import './static/Main.css';
-import './static/App.css';
 
 function App() {
   return (
