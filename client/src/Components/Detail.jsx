@@ -1,24 +1,17 @@
 import '../static/Detail.css'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { useParams, useHistory, Link } from "react-router-dom";
-
+import { useParams, Link } from "react-router-dom";
+//   THIS IS NOT COMPLETED YET :)
 const Detail = () => {
     const { id } = useParams();
-    const [userState, setUserState] = useState({})
-    const history = useHistory();
-    const [eventName, setEventName] = useState("")
-    const [date, setDate] = useState("")
-    const [city, setCity] = useState("")
-    const [isVirtual, setIsVirtual] = useState(false)
-    const [description, setDescription] = useState("")
-    const [vibes, setVibes] = useState("")
+    const [eventState, setEventState] = useState({})
 
     useEffect(() => {
         axios.get(`http://localhost:8000/api/events/${id}`)
             .then(res => {
                 console.log(res.data)
-                setUserState(res.data)
+                setEventState(res.data)
             })
             .catch(err => console.error(err));
     }, []);
@@ -26,23 +19,23 @@ const Detail = () => {
     return (
         <div>
             <div className="container">
-                <div className="card col-6 bg-light">
+                <div className="card col bg-light">
                     {
-                        (userState) ?
+                        (eventState) ?
                             <div className="row">
-                                <h1 className="h1">{userState.eventName}</h1>
+                                <h1 className="h1">{eventState.eventName}</h1>
                             </div> : <h1>Loading...</h1>
                     }
                     <h1>Detail</h1>
-                    <table className="card col-4 ">
+                    <table className="card col-6 ">
                         <thead>
                             <th className="h4">Event Name</th>
                         </thead>
                         <tbody className="col">
-                            <tr>Date: {userState.date}</tr>
-                            <tr>Description: {userState.description}</tr>
-                            <tr>Virtual: {userState.isVirtual}</tr>
-                            <tr>Vibes: {userState.vibes}</tr>
+                            <tr>Date: {eventState.date}</tr>
+                            <tr>Description: {eventState.description}</tr>
+                            <tr>Virtual: {eventState.isVirtual}</tr>
+                            <tr>Vibes: {eventState.vibes}</tr>
                         </tbody>
                     </table>
                     <Link to={"/api/events/:id"}>Update</Link>

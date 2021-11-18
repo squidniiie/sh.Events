@@ -2,5 +2,13 @@
 .container {
     display: flex;
     justify-content: center;
-
+    flex-direction: column;
+    align-content: center;
+    border-radius: 16px;
+}
+.card.col-6.bg-light{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
 }
