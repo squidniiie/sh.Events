@@ -6,7 +6,6 @@ import '../static/Main.css'
 function Main() {
     return (
         <div>
-            <Navbar />
             <div className="main">
                 <div className="row">
                     <img className="hero col" src="https://cdn.pixabay.com/photo/2021/10/19/21/31/landscape-6724639_1280.jpg" alt="hero img" />
