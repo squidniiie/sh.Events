@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import Main from './view/Main';
 import About from './view/About';
-import EventForm from './view/Create';
+import Create from './view/Create';
 import Dashboard from './view/Dashboard';
 import './static/Main.css';
 import './static/App.css';
@@ -20,7 +20,7 @@ function App() {
             <Main />
           </Route>
           <Route exact path="/new_event">
-            <EventForm />
+            <Create />
           </Route>
           <Route exact path="/events/:city">
             <Dashboard />

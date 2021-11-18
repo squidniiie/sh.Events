@@ -13,7 +13,7 @@ function Main() {
                     <div className="hero col">
                         <div className="hero card">
                             <h5 style={{ fontStyle: "italic" }}>Building a Diversely Likeminded Community</h5>
-                            <h1 style={{ fontWeight: "Bold", fontSize: "42pt" }}>she.Event</h1>
+                            <h1 style={{ fontWeight: "Bold", fontSize: "42pt" }}>sh.Event</h1>
                         </div>
                     </div>
                 </div>
