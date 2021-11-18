@@ -8,6 +8,7 @@ import Main from './view/Main';
 import About from './view/About';
 import Create from './view/Create';
 import Dashboard from './view/Dashboard';
+import Navbar from './Components/Navbar'
 import './static/Main.css';
 import './static/App.css';
 
@@ -15,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Navbar />
         <Switch>
           <Route exact path="/">
             <Main />

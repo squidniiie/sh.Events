@@ -50,7 +50,6 @@ export default () => {
 
     return (
         <div>
-            <Navbar />
             <div className="card bg-light col-10">
                 <Link to={"/"}>Home</Link>
                 <h1>Add New Event</h1>
