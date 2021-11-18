@@ -10,16 +10,11 @@ module.exports.createEvent = (request, response) => {
 
 // RETRIEVE METHODS:
 
-// module.exports.getAbout = (request, response) => {
-//     Event.find({})
-//         .then(events => response.json(events))
-//         .catch(err => response.json(err))
-// }
-// module.exports.getAllEvents = (request, response) => {
-//     Event.find({})
-//         .then(events => response.json(events))
-//         .catch(err => response.json(err))
-// }
+module.exports.getAllEvents = (request, response) => {
+    Event.find({})
+        .then(events => response.json(events))
+        .catch(err => response.json(err))
+}
 module.exports.getEvent = (request, response) => {
     Event.findOne({ _id: request.params.id })
         .then(event => response.json(event))
