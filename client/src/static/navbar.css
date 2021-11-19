@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Philosopher:wght@400;700&display=swap');
 * {
     margin: 0px;
     padding: 0px;
@@ -11,11 +12,18 @@
     height:5vw;
     width: 101vw;
     box-shadow: rgba(0, 0, 0, 0.359) 3px 3px 16px 1px;
+   background:#AAB9BF;
+
 }
 .nav-links {
     display: flex;
     gap:20px;
+    color:#93BBBF;
 }
+/* .nav-links:hover{
+    font-family: 'Abril Fatface';
+    font-size: 14pt;
+} */
 .nav-actions{
     display: flex;
     flex-wrap: nowrap;
@@ -27,8 +35,13 @@
 }
 .nav.brand {
     margin-left:13rem;
+    font-weight: bold;
+    font-family: 'Philosopher', sans-serif;
+    color: rgb(54, 84, 96);
 }
 .search {
+    margin: 0px 10px 0px 0px;
+    height:30px;
     border-style: none;
     border-radius: 16px;
     box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
@@ -41,4 +54,17 @@
 .nav-link.active:hover {
     font-family: 'Abril Fatface';
     font-size: 14pt;
+    color:#93BBBF;
+}
+.nav-link.active {
+    color:#93BBBF;
+}
+.nav-item {
+    color:#93BBBF;
+}
+.btn.btn-outline-secondary {
+    border-radius: 16px;
+    margin: 0px 10px 0px 10px;
+    border: none;
+    box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
 }
