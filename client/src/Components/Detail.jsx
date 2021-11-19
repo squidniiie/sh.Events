@@ -1,46 +1,44 @@
 import '../static/Detail.css'
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { useParams, Link } from "react-router-dom";
-//   THIS IS NOT COMPLETED YET :)
-const Detail = () => {
-    const { id } = useParams();
-    const [eventState, setEventState] = useState({})
+import { useHistory } from "react-router-dom";
 
-    useEffect(() => {
-        axios.get(`http://localhost:8000/api/events/${id}`)
+const Detail = (props) => {
+    const history = useHistory();
+    const { event, setEvent, submitted, setSubmitted, formatDate } = props;
+
+    const deleteEvent = (id) => {
+        axios.delete('http://localhost:5000/api/events/' + id)
             .then(res => {
-                console.log(res.data)
-                setEventState(res.data)
+                setSubmitted(!submitted)
+                setEvent({})
             })
             .catch(err => console.error(err));
-    }, []);
+    }
 
     return (
-        <div>
-            <div className="container">
-                <div className="card col bg-light">
-                    {
-                        (eventState) ?
-                            <div className="row">
-                                <h1 className="h1">{eventState.eventName}</h1>
-                            </div> : <h1>Loading...</h1>
-                    }
-                    <h1>Detail</h1>
-                    <table className="card col-6 ">
-                        <thead>
-                            <th className="h4">Event Name</th>
-                        </thead>
-                        <tbody className="col">
-                            <tr>Date: {eventState.date}</tr>
-                            <tr>Description: {eventState.description}</tr>
-                            <tr>Virtual: {eventState.isVirtual}</tr>
-                            <tr>Vibes: {eventState.vibes}</tr>
-                        </tbody>
-                    </table>
-                    <Link to={"/api/events/:id"}>Update</Link>
-                </div>
-            </div>
+        <div className="d-flex col">
+            <table>
+                <thead>
+                    <th></th>
+                </thead>
+                {
+                    (event.eventName) ?
+                        <tbody className="col card">
+                            <tr className="h1">{event.eventName}</tr>
+                            <tr className="h5"> {formatDate(event.date)}</tr>
+                            <tr className="h3">Description: </tr>
+                            <tr className="h6">This event {(event.isVirtual) ? "is virtual" : (event.isVirtual === undefined) ? "" : "is in Person"}</tr>
+                            <tr className="h6">{event.description} The vibe of "{event.eventName}" is {event.vibes}.</tr>
+                            <tr className="btn-group">
+                                <button className="btn btn-outline-warning" onClick={(e) => history.push(`/events/${event._id}/edit`)}>Update</button>
+                                <button className="btn btn-outline-danger" onClick={(e) => { deleteEvent(event._id) }}>Delete</button>
+                            </tr>
+                        </tbody > : <div>
+                            <img className="col card" src="https://cdn.pixabay.com/photo/2020/07/10/19/07/she-5391770_1280.jpg" alt="girl img" />
+                        </div>
+                }
+            </table>
         </div>
     )
 }

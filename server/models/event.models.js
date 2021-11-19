@@ -15,7 +15,7 @@ const EventSchema = new mongoose.Schema({
     },
     city: {
         type: String,
-        enum: ['Los Angeles', 'San Francisco', 'Seattle', 'Remote'],
+        enum: ['los_angeles', 'san_francisco', 'seattle', 'remote'],
         required: [true, "State the location of your event"]
     },
     isVirtual: {
