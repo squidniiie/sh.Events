@@ -3,27 +3,35 @@
     padding: 0px;
 
 }
-.mainContainer {
-    background-color:#F0F0F2 ;
+.main {
+    width: 100vw;
+    height: 50vw;
+}
+.hero.d-flex.justify-content-center {
+    width: 100vw;
+  height:50vw;
 }
 img.hero.col {
-    width: 50vw;
-    height: 73vw;
+    width:10vw;
+    height:70vw;
+    margin: 0px 10px 0px 10px;
 }
 div.hero.col {
     background-image: radial-gradient(#fff 40%,#e6e6e6);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50vw;
-    height: 50vw;
+    width:10vw;
+    height:70vw;
+    margin: 0px 0px 0px 10px;
 }
 .hero.card{
     display: flex;
-    height: 15vw;
+    height: 10rem;
+    width: 40rem;
     justify-content: center;
     text-align: center;
-    padding: 20px 50px;
+    /* padding: 20px 50px; */
     box-shadow: rgb(91, 91, 91) 6px 6px 10px 1px;
 }
 

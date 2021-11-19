@@ -24,18 +24,18 @@ const Detail = (props) => {
                 </thead>
                 {
                     (event.eventName) ?
-                        <tbody className="col card">
+                        <tbody className="info col card">
                             <tr className="h1">{event.eventName}</tr>
                             <tr className="h5"> {formatDate(event.date)}</tr>
                             <tr className="h3">Description: </tr>
                             <tr className="h6">This event {(event.isVirtual) ? "is virtual" : (event.isVirtual === undefined) ? "" : "is in Person"}</tr>
                             <tr className="h6">{event.description} The vibe of "{event.eventName}" is {event.vibes}.</tr>
-                            <tr className="btn-group">
-                                <button className="btn btn-outline-warning" onClick={(e) => history.push(`/events/${event._id}/edit`)}>Update</button>
-                                <button className="btn btn-outline-danger" onClick={(e) => { deleteEvent(event._id) }}>Delete</button>
+                            <tr>
+                                <button className="btn action" onClick={(e) => history.push(`/events/${event._id}/edit`)}>Update</button>
+                                <button className="btn action" onClick={(e) => { deleteEvent(event._id) }}>Delete</button>
                             </tr>
                         </tbody > : <div>
-                            <img className="col card" src="https://cdn.pixabay.com/photo/2020/07/10/19/07/she-5391770_1280.jpg" alt="girl img" />
+                            <img className="image col card" src="https://cdn.pixabay.com/photo/2020/07/10/19/07/she-5391770_1280.jpg" alt="girl img" />
                         </div>
                 }
             </table>
