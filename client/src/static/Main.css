@@ -1,11 +1,14 @@
 * {
     margin: 0px;
     padding: 0px;
-}
 
+}
+.mainContainer {
+    background-color:#F0F0F2 ;
+}
 img.hero.col {
     width: 50vw;
-    height: 50vw;
+    height: 73vw;
 }
 div.hero.col {
     background-image: radial-gradient(#fff 40%,#e6e6e6);
