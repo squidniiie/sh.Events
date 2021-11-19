@@ -14,7 +14,6 @@ const Create = () => {
     const [description, setDescription] = useState("")
     const [vibes, setVibes] = useState("")
 
-
     const submitHandler = e => {
         e.preventDefault();
         const postData = {
@@ -61,9 +60,9 @@ const Create = () => {
                         <label>In which city are you hosting this event?</label><br />
                         <select onChange={e => setCity(e.target.value)} value={city}>
                             <option></option>
-                            <option value="Los Angeles">Los Angeles</option>
-                            <option value="San Francisco">San Francisco</option>
-                            <option value="Seattle">Seattle</option>
+                            <option value="los_angeles">Los Angeles</option>
+                            <option value="san_francisco">San Francisco</option>
+                            <option value="seattle">Seattle</option>
                         </select>
                     </p>
                     <p>
