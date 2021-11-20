@@ -1,5 +1,6 @@
 .d-flex.justify-content-center {
     padding:0px 0px 30px 0px;
+    text-align: center;
 }
 .card {
     width:75vw;
@@ -10,4 +11,20 @@
     border-radius: 16px;
     box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
     padding: 0px 5px 0px 5px;
+}
+.update.btn {
+    border: none;
+    box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    background-color: #98d0d5;
+    color: #FFF;
+    margin: 10px;
+}
+.btn.create {
+    border: none;
+    box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    background-color: #98d0d5;
+    color: #FFF;
+    margin: 10px;
 }
