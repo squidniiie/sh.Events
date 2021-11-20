@@ -97,7 +97,7 @@ const Create = () => {
                         <br />
                         <textarea className="input" name="description" id="description" cols="50" rows="5" onChange={e => setDescription(e.target.value)}></textarea>
                     </p>
-                    <input className="btn btn-outline-info" type="submit" value="Create new sh.Event!" />
+                    <input className="btn create" type="submit" value="Create new sh.Event!" />
                 </form>
 
             </div>
