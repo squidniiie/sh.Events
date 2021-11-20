@@ -62,20 +62,20 @@ const Update = () => {
     return (
         <div className="d-flex justify-content-center">
             <div className="card bg-light row">
-                <h1>Add New Event</h1>
+                <h1>Update Your Event</h1>
                 <form onSubmit={submitHandler}>
                     {errors.map((err, index) => <p key={index}>{err}</p>)}
                     <p>
                         <label>Event Name:</label><br />
-                        <input type="text" onChange={e => setEventName(e.target.value)} value={eventName} />
+                        <input className="input" type="text" onChange={e => setEventName(e.target.value)} value={eventName} />
                     </p>
                     <p>
                         <label>When is this event taking place?</label><br />
-                        <input type="text" onChange={e => setDate(e.target.value)} value={date} />
+                        <input className="input" type="text" onChange={e => setDate(e.target.value)} value={date} />
                     </p>
                     <p>
                         <label>In which city are you hosting this event?</label><br />
-                        <select onChange={e => setCity(e.target.value)} value={city}>
+                        <select className="input" onChange={e => setCity(e.target.value)} value={city}>
                             <option></option>
                             <option value="los_angeles">Los Angeles</option>
                             <option value="san_francisco">San Francisco</option>
@@ -102,7 +102,7 @@ const Update = () => {
                     </p>
                     <p>
                         <label>What is the vibe of your event?</label><br />
-                        <select name="vibes" id="vibes" value={vibes} onChange={e => setVibes(e.target.value)}>
+                        <select className="input" name="vibes" id="vibes" value={vibes} onChange={e => setVibes(e.target.value)}>
                             <option></option>
                             <option value="casual">Keeping it Casual</option>
                             <option value="dressy">Dressy/Formal</option>
@@ -112,9 +112,9 @@ const Update = () => {
                     <p>
                         Add some extra details here:
                         <br />
-                        <textarea value={description} name="description" id="description" cols="50" rows="5" onChange={e => setDescription(e.target.value)}></textarea>
+                        <textarea className="input" value={description} name="description" id="description" cols="50" rows="5" onChange={e => setDescription(e.target.value)}></textarea>
                     </p>
-                    <input className="btn btn-outline-info" type="submit" value="Update your Event" />
+                    <input className="update btn" type="submit" value="Update your Event" />
                 </form>
             </div>
         </div>
