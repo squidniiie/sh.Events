@@ -11,10 +11,10 @@ function About() {
                     <div class="about card">
                         <h3>About our Mission</h3>
                         <p>
-                            Our group decided that we wanted to create what is essentially a safe space for events to be created and posted for women in technological fields.
+                            Our group wanted to create a safe space for networking events to be created and posted for women, by women, in technological fields.
                         </p>
                         <p>
-                            The idea is simple, women in tech being able to find a safe space for what they love to do. If they cannot find it themselves, to then be able to create that safe space for themselves and others in their area. These events can be anything from casual meet ups, to formal get togethers. The event is yours to create!
+                            The idea is simple, women in STEM fields being able to find like minded women that share common interests inside and outside the tech industry. We want to empower women to take networking into their own hands in a fun and exciting way. To create events that can be anything from casual meet ups, to formal get togethers, to virtual happy hours and more. The event is yours to create! Lets network!
                         </p>
                         <button class="btn btn-outline-secondary">Join us!</button>
                     </div>

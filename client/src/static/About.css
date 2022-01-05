@@ -6,19 +6,22 @@
 /* Column 1 */
 .about.card{
     display: flex;
-    width: 40vw;
-    height: 25vw;
+    width: auto;
+    height: auto;
     text-align: center;
     padding: 20px 50px;
     box-shadow: rgb(91, 91, 91) 6px 6px 10px 1px;
 }
+
 .about.row{
     height: 100%;
 }
+
 .col{
     position: relative;
     
 }
+
 .img.col {
     width:100vw;
     justify-content: center;

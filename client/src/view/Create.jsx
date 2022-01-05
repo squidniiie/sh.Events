@@ -89,7 +89,7 @@ const Create = () => {
                             <option></option>
                             <option value="casual">Keeping it Casual</option>
                             <option value="dressy">Dressy/Formal</option>
-                            <option value="themed">We're doing a theme, see the box below to add details.🙃 </option>
+                            <option value="themed">We're doing a theme, see the box below to add details.</option>
                         </select>
                     </p>
                     <p>
@@ -97,7 +97,7 @@ const Create = () => {
                         <br />
                         <textarea className="input" name="description" id="description" cols="50" rows="5" onChange={e => setDescription(e.target.value)}></textarea>
                     </p>
-                    <input className="btn btn-outline-info" type="submit" value="Create new sh.Event!" />
+                    <input className="btn" type="submit" value="Create new sh.Event!" />
                 </form>
 
             </div>

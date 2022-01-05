@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
-import { useParams, useHistory } from 'react-router-dom'
+import { useParams, useHistory, Link } from 'react-router-dom'
 import '../static/Create.css'
 
 const Update = () => {
@@ -27,7 +27,6 @@ const Update = () => {
                 setDescription(res.data.description)
                 setVibes(res.data.vibes)
             })
-        // .catch(err => console.log(err))
     }, [])
 
     const submitHandler = e => {
@@ -62,7 +61,7 @@ const Update = () => {
     return (
         <div className="d-flex justify-content-center">
             <div className="card bg-light row">
-                <h1>Add New Event</h1>
+                <h1>Update {eventName}</h1>
                 <form onSubmit={submitHandler}>
                     {errors.map((err, index) => <p key={index}>{err}</p>)}
                     <p>
@@ -71,7 +70,7 @@ const Update = () => {
                     </p>
                     <p>
                         <label>When is this event taking place?</label><br />
-                        <input  className="input" type="text" onChange={e => setDate(e.target.value)} value={date} />
+                        <input  className="input" type="date" onChange={e => setDate(e.target.value)} value={date} />
                     </p>
                     <p>
                         <label>In which city are you hosting this event?</label><br />
@@ -106,7 +105,7 @@ const Update = () => {
                             <option></option>
                             <option value="casual">Keeping it Casual</option>
                             <option value="dressy">Dressy/Formal</option>
-                            <option value="themed">We're doing a theme, see the box below to add details.🙃 </option>
+                            <option value="themed">We're doing a theme, see the box below to add details.</option>
                         </select>
                     </p>
                     <p>
@@ -114,7 +113,8 @@ const Update = () => {
                         <br />
                         <textarea className="input" value={description} name="description" id="description" cols="50" rows="5" onChange={e => setDescription(e.target.value)}></textarea>
                     </p>
-                    <input className="btn btn-outline-info" type="submit" value="Update your Event" />
+                    <input className="btn" type="submit" value="Update your Event" />
+                    <Link to={`/`}><button className='cancleButton'>Cancle</button></Link>
                 </form>
             </div>
         </div>

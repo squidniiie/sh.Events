@@ -14,7 +14,6 @@ const Navbar = () => {
                 <div className="nav-links">
                     <Link to={"/new_event"} style={{ textDecoration: "none", color: "rgb(54, 84, 96)" }}>Create New</Link>
                     <Link to={"/about"} style={{ textDecoration: "none", color: "rgb(54, 84, 96)" }}>Mission</Link>
-
                 </div>
                 <div className="nav brand">
                     <Link to={'/'} style={{ textDecoration: "none" }}>
@@ -30,17 +29,11 @@ const Navbar = () => {
                 </div>
             </nav >
             <nav>
-                <ul className="nav justify-content-center">
-                    <li className="nav-item">
+                <div className="nav justify-content-center">
                         <Link className="nav-link active" aria-current="page" to={`/events/los_angeles`}>Los Angeles</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to={`/events/san_francisco`}>San Francisco</Link>
-                    </li>
-                    <li className="nav-item">
                         <Link className="nav-link active" aria-current="page" to={`/events/seattle`}>Seattle</Link>
-                    </li>
-                </ul>
+                </div>
             </nav>
         </div >
     )

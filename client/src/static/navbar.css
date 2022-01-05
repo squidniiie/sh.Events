@@ -12,18 +12,14 @@
     height:5vw;
     width: 101vw;
     box-shadow: rgba(0, 0, 0, 0.359) 3px 3px 16px 1px;
-   background:#AAB9BF;
-
+    background:#AAB9BF;
 }
 .nav-links {
     display: flex;
     gap:20px;
     color:#93BBBF;
 }
-/* .nav-links:hover{
-    font-family: 'Abril Fatface';
-    font-size: 14pt;
-} */
+
 .nav-actions{
     display: flex;
     flex-wrap: nowrap;
@@ -59,9 +55,7 @@
 .nav-link.active {
     color:#93BBBF;
 }
-.nav-item {
-    color:#93BBBF;
-}
+
 .btn.btn-outline-secondary {
     border-radius: 16px;
     margin: 0px 10px 0px 10px;

@@ -1,5 +1,4 @@
 import '../static/Detail.css'
-// import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
@@ -17,28 +16,24 @@ const Detail = (props) => {
     }
 
     return (
-        <div className="d-flex col">
-            <table>
-                <thead>
-                    <th></th>
-                </thead>
+        <div className="detailContainer">
                 {
                     (event.eventName) ?
-                        <tbody className="col card">
-                            <tr className="h1">{event.eventName}</tr>
-                            <tr className="h5"> {formatDate(event.date)}</tr>
-                            <tr className="h3">Description: </tr>
-                            <tr className="h6">This event {(event.isVirtual) ? "is virtual" : (event.isVirtual === undefined) ? "" : "is in Person"}</tr>
-                            <tr className="h6">{event.description} The vibe of "{event.eventName}" is {event.vibes}.</tr>
-                            <tr className="btn-group">
-                                <button className="btn btn-outline-warning" onClick={(e) => history.push(`/events/${event._id}/edit`)}>Update</button>
-                                <button className="btn btn-outline-danger" onClick={(e) => { deleteEvent(event._id) }}>Delete</button>
-                            </tr>
-                        </tbody > : <div>
-                            <img className="col card" src="https://cdn.pixabay.com/photo/2020/07/10/19/07/she-5391770_1280.jpg" alt="girl img" />
+                        <div className="detailCard">
+                            <h1 className="detailHeader">{event.eventName}</h1>
+                            <h5> {formatDate(event.date)}</h5>
+                            <h3>Description: </h3>
+                            <h6>This event {(event.isVirtual) ? "is virtual" : (event.isVirtual === undefined) ? "" : "is in Person"}</h6>
+                            <h6>The vibe of "{event.eventName}" is {event.vibes}.</h6>
+                            <h6>{event.description}</h6>
+                            <h6 className='bothDetailButtons'>
+                                <button className="updateButton" onClick={(e) => history.push(`/events/${event._id}/edit`)}>Update</button>
+                                <button className="deleteButton" onClick={(e) => { deleteEvent(event._id) }}>Delete</button>
+                            </h6>
+                        </div > : <div className="noEventSelected">
+                            <h3 className="noEventMessage">Select event to view details here</h3>
                         </div>
                 }
-            </table>
         </div>
     )
 }
